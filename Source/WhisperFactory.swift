@@ -287,6 +287,12 @@ extension WhisperFactory: UINavigationControllerDelegate {
       }
     }
 
+    if UIDevice.current.orientation.isLandscape {
+        maximumY = 32
+    } else {
+        maximumY = 44
+    }
+    
     whisperView.frame.origin.y = maximumY
   }
 
